@@ -1,0 +1,11 @@
+1. useEffect Hook: The `useEffect` hook in the Stopwatch component is used to start and stop the timer based on the `isRunning` state. It runs the timer logic when the component is first rendered and whenever the `isRunning` state changes. Inside the `useEffect` hook, we use `setInterval` to increment the `time` state every second when the stopwatch is running, and we clear the interval when the stopwatch is stopped.
+
+2. useState Hook: The `useState` hook manages the state for the Stopwatch component. It is used to create two state variables: `isRunning`, which tracks whether the stopwatch is running or stopped, and `time`, which stores the elapsed time in seconds. The `useState` hook provides functions to update these state variables (`setIsRunning` and `setTime`), and React re-renders the component whenever these state variables change.
+
+3. setInterval Function: The `setInterval` function is used inside the `useEffect` hook to create a timer that updates the `time` state every second. It takes
+
+a callback function and an interval duration (in milliseconds) as arguments. In this case, the interval callback function increments the `time` state by 1 every second, effectively creating a timer that counts the elapsed time.
+
+4. Displaying Milliseconds: To modify the Stopwatch component to display milliseconds, you would need to update the `formatTime` function to include milliseconds. You could modify the `formatTime` function to calculate and format the milliseconds part of the time, similar to how minutes and seconds are calculated and formatted. Additionally, you would need to update the timer interval to increment the time by milliseconds instead of seconds.
+
+5. formatTime Function: The `formatTime` function in the Stopwatch component is used to format the `time` state into a human-readable time format (e.g., "mm:ss"). It calculates the minutes and seconds from the `time` state and returns a string with the formatted time. The purpose of this function is to ensure that the time displayed in the stopwatch is easy to read and understand.
